@@ -11,16 +11,26 @@ const Greeting = () => {
     dispatch(createGreetings());
   }, [dispatch]);
 
+  if (status === 'loading') {
+    return (
+      <div>
+        <h2 className="error-message">Loading...</h2>
+      </div>
+    );
+  }
+
+  if (status === 'failed') {
+    return (
+      <div>
+        <h2 className="error-message">Error in loading...</h2>
+      </div>
+    );
+  }
+
   return (
     <div>
-      <h1>Random Greeting:</h1>
-      {status === 'loading' ? (
-        <p>Loading...</p>
-      ) : status === 'failed' ? (
-        <p className="error-message">Error loading greeting</p>
-      ) : (
-        <p className='greeting-message'>{greeting}</p>
-      )}
+      <h1 className="greeting-heading">Random Greeting</h1>
+      <h2 className="greeting-message">{greeting}</h2>
     </div>
   );
 };
