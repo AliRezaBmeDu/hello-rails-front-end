@@ -1,0 +1,19 @@
+.greeting-heading {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
+.greeting-message {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  color: green;
+  margin-top: 2rem;
+}
+
+.error-message {
+  color: red;
+  font-family: 'Times New Roman', Times, serif;
+}
